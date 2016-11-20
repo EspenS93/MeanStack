@@ -1,0 +1,15 @@
+<h2>Available Classes</h2>
+<ul class="characterClasses">
+  <li *ngFor="let characterClass of characterClasses;let i = index" [class.selected]="characterClass === selectedCharacterClass" (click)="onSelect(characterClass)">
+      <span class="badge">{{i+1}}</span> 
+      <span>{{characterClass.name}}</span>
+      <button class="delete" (click)="deleteCharacterClass(characterClass); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedCharacterClass">
+  <h2>
+    {{selectedCharacterClass.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+<a routerLink="/newClass">Create a new Class</a>

@@ -1,0 +1,20 @@
+<h1>New Race</h1>
+<div *ngIf="newRace">
+  <div>
+    <label>Name:</label> <input [(ngModel)]="newRace.name" #raceName />
+  </div>
+  <div>
+    <label>Strength:</label><input type="number" [(ngModel)]="newRace.strength" #raceStrength />
+</div>
+  <div>
+    <label>Agility:</label> <input type="number" [(ngModel)]="newRace.agility" #raceAgility />
+  </div>
+  <div>
+    <label>Intellect:</label> <input type="number" [(ngModel)]="newRace.intellect" #raceIntellect />
+  </div>
+  <div>
+    <button (click)="add();">
+      <p>Add</p>
+    </button>
+  </div>
+</div>

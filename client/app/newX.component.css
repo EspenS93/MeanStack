@@ -1,0 +1,11 @@
+input, select {
+  position: absolute;
+  left: 120px;
+}
+.stats {
+  position: absolute;
+  left :150px;
+}
+div {
+  padding: 10px;
+}

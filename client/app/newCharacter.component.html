@@ -1,0 +1,36 @@
+<h1>New Character</h1>
+<div *ngIf="newCharacter">
+    <div>
+        <label>Name:</label> <input [(ngModel)]="newCharacter.name" #characterName />
+    </div>
+    <div>
+        <label>Race:</label> <select #sel (change)="onRaceChange(sel.value); refresh();">
+  <option *ngFor="let race of races">
+    {{race.name}}
+  </option>
+  </select>
+    </div>
+    <div>
+        <label>Class:</label>
+        <select #sel2 (change)="onClassChange(sel2.value); refresh();">
+          <option *ngFor="let characterClass of characterClasses">
+            {{characterClass.name}}
+          </option>
+        </select>
+    </div>
+    <div>
+        <label>Strength:</label> <label class="stats">{{newCharacter.strength}}</label>
+    </div>
+    <div>
+        <label>Agility:</label> <label class="stats">{{newCharacter.agility}}</label>
+    </div>
+    <div>
+        <label>Intellect:</label> <label class="stats">{{newCharacter.intellect}}</label>
+    </div>
+    <div>
+        <button (click)="add();">
+      <p>Add</p>
+    </button>
+    </div>
+
+</div>

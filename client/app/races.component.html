@@ -1,0 +1,15 @@
+<h2>Available Races</h2>
+<ul class="races">
+  <li *ngFor="let race of races;let i = index" [class.selected]="race === selectedRace" (click)="onSelect(race)">
+      <span class="badge">{{i+1}}</span> 
+      <span>{{race.name}}</span>
+      <button class="delete" (click)="deleteRace(race); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedRace">
+  <h2>
+    {{selectedRace.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+<a routerLink="/newRace">Create a new Race</a>

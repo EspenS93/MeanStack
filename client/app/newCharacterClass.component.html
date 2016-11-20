@@ -1,0 +1,21 @@
+<h1>New Class</h1>
+<div *ngIf="newCharacterClass">
+
+  <div>
+    <label>Name:</label> <input [(ngModel)]="newCharacterClass.name" #characterName />
+  </div>
+  <div>
+    <label>Strength:</label><input type="number" [(ngModel)]="newCharacterClass.strength" #characterStrength />
+  </div>
+  <div>
+    <label>Agility:</label> <input type="number" [(ngModel)]="newCharacterClass.agility" #characterAgility />
+  </div>
+  <div>
+    <label>Intellect:</label> <input type="number" [(ngModel)]="newCharacterClass.intellect" #characterIntellect />
+  </div>
+  <div>
+    <button (click)="add();">
+      <p>Add</p>
+    </button>
+  </div>
+</div>

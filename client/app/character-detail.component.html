@@ -1,0 +1,29 @@
+<div *ngIf="character">
+    <h2>{{character.name}} details!</h2>
+    <div>
+        <label #a>Name: </label>
+        <input [(ngModel)]="character.name" placeholder="name" />
+    </div>
+    <div>
+        <label #a>Race: </label>
+        <label>{{character.race}}</label>
+    </div>
+    <div>
+        <label #a>Class: </label>
+        <label>{{character.characterClass}}</label>
+    </div>
+    <div>
+        <label #a>Strength: </label>
+        <label>{{character.strength}}</label>
+    </div>
+    <div>
+        <label #a>Agility: </label>
+        <label>{{character.agility}}</label>
+    </div>
+    <div>
+        <label #a>Intellect: </label>
+        <label>{{character.intellect}}</label>
+    </div>
+    <button (click)="goBack()">Back</button>
+    <button (click)="save()">Save</button>
+</div>
