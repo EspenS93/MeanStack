@@ -3,8 +3,6 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-//import { Database } from './database';
 import './rxjs-extensions';
 
 import { AppComponent }        from './app.component';
@@ -33,7 +31,6 @@ import { routing } from './app.routing'
     BrowserModule,
     FormsModule,
     HttpModule,
-    //InMemoryWebApiModule.forRoot(Database),
     routing
   ],
   declarations: [

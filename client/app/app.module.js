@@ -12,7 +12,6 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
-//import { Database } from './database';
 require('./rxjs-extensions');
 var app_component_1 = require('./app.component');
 var character_detail_component_1 = require('./character-detail.component');
@@ -39,7 +38,6 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                //InMemoryWebApiModule.forRoot(Database),
                 app_routing_1.routing
             ],
             declarations: [
